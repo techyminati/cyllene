@@ -247,11 +247,11 @@ bool __init tp_judge_ic_match(char *tp_ic_name)
 	case 21748:
 	case 21749:
 		pr_info("[TP] case 20609\n");
-		if (strstr(tp_ic_name, "novatek,nf_nt36672c") && strstr(saved_command_line, "oplus20609_nt36672c_tm_cphy_dsi_vdo_lcm_drv")) {
+		if (strstr(tp_ic_name, "novatek,nf_nt36672c") && strstr(saved_command_line, "oppo20609_nt36672c_tm_cphy_dsi_vdo_lcm_drv")) {
 			pr_info("[TP] touch judge ic = novatek,nf_nt36672c,TIANMA\n");
 			return true;
 		}
-		if (strstr(tp_ic_name, "ilitek,ili7807s") && strstr(saved_command_line, "oplus20609_ili7807s_tm_cphy_dsi_vdo_lcm_drv")) {
+		if (strstr(tp_ic_name, "ilitek,ili7807s") && strstr(saved_command_line, "oppo20609_ili7807s_tm_cphy_dsi_vdo_lcm_drv")) {
 			pr_info("[TP] touch judge ic = ilitek,ili9882n(ili7807s),TIANMA\n");
 			return true;
 		}
@@ -853,12 +853,12 @@ bool  tp_judge_ic_match_commandline(struct panel_info *panel_data)
 		pr_info("[TP] case 20609\n");
 		is_tp_type_got_in_match = true;
 
-		if (strstr(saved_command_line, "oplus20609_nt36672c_tm_cphy_dsi_vdo_lcm_drv")) {
+		if (strstr(saved_command_line, "oppo20609_nt36672c_tm_cphy_dsi_vdo_lcm_drv")) {
 			pr_info("[TP] touch ic = novatek,nf_nt6672c\n");
 			g_tp_dev_vendor = TP_TIANMA;
 			tp_used_index = nt36672c;
 		}
-		if (strstr(saved_command_line, "oplus20609_ili7807s_tm_cphy_dsi_vdo_lcm_drv")) {
+		if (strstr(saved_command_line, "oppo20609_ili7807s_tm_cphy_dsi_vdo_lcm_drv")) {
 			pr_info("[TP] touch ic = novatek,ili9882n(ili7807s)\n");
 			g_tp_dev_vendor = TP_TIANMA;
 			tp_used_index = ili9882n_inx;
